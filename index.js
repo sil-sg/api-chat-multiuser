@@ -12,11 +12,11 @@ const { PORT } = process.env
 
 start()
 
-app.get('/', (req, res) => { res.json({ message: "Server running..." }) })
-app.get('/api', (req, res) => { res.json({ message: "Server running..." }) })
+app.get('/', (req, res) => { res.json({ message: "Server running...", sucess: true }) })
+//app.get('/api', (req, res) => { res.json({ message: "Server running..." }) })
 
 // GET ALL
-app.get('/api/users', async (req, res) => {
+app.get('/users', async (req, res) => {
     try {
         
         const data = await User.find()
@@ -33,7 +33,7 @@ app.get('/api/users', async (req, res) => {
         console.error(e)
     }
 })
-app.get('/api/messages', async (req, res) => {
+app.get('/messages', async (req, res) => {
     try {
         
         const data = await Message.find()
@@ -50,7 +50,7 @@ app.get('/api/messages', async (req, res) => {
         console.error(e)
     }
 })
-app.get('/api/chats', async (req, res) => {
+app.get('/chats', async (req, res) => {
     try {
         
         const data = await Chat.find()
@@ -69,7 +69,7 @@ app.get('/api/chats', async (req, res) => {
 })
 
 // DELETE ALL
-app.delete('/api/users', async (req, res) => {
+app.delete('/users', async (req, res) => {
     try {
         
         const data = await User.deleteMany({})
@@ -88,7 +88,7 @@ app.delete('/api/users', async (req, res) => {
 })
 
 // GET ONE BY EMAIL / VERIFY
-app.get('/api/users/:email', async (req, res) => {
+app.get('/users/:email', async (req, res) => {
     try {
         const { email } = req.params
         
@@ -113,7 +113,7 @@ app.get('/api/users/:email', async (req, res) => {
 })
 
 // POST USER / MESSAGE
-app.post('/api/users', async (req, res) => {
+app.post('/users', async (req, res) => {
     try {
         const { name, email, password } = req.body
         
@@ -131,7 +131,7 @@ app.post('/api/users', async (req, res) => {
         console.error(e)
     }
 })
-app.post('/api/messages', async (req, res) => {
+app.post('/messages', async (req, res) => {
     try {
         const { content, senderId, senderName, visualized } = req.body
         
@@ -151,7 +151,7 @@ app.post('/api/messages', async (req, res) => {
 })
 
 // LOGIN TO ACCOUNT
-app.get('/api/users/:name/:email/:password', async (req, res) => {
+app.get('/users/:name/:email/:password', async (req, res) => {
     try {
         const { name, email, password } = req.params
         
@@ -176,7 +176,7 @@ app.get('/api/users/:name/:email/:password', async (req, res) => {
 })
 
 // CHAT PRIVATE
-app.post('/api/chats', async (req, res) => {
+app.post('/chats', async (req, res) => {
     try {
         const { name, creatorId, creatorName, creatorEmail } = req.body
         
