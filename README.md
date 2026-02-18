@@ -1,6 +1,20 @@
 <h1>Api de chat multi-usuario feito com express mongoose e mongodb</h1>
 
 <section>
+    <h2>Comandos para rodar:</h2>
+    <ol>
+        <li>
+            <strong>npm start</strong>
+            (node index.js)
+        </li>
+        <li>
+            <strong>npm run dev</strong>
+            (nodemon index.js)
+        </li>
+    </ol>
+</section>
+
+<section>
     <h2>Endpoints:</h2>
     <div>
         <ul>
