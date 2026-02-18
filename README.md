@@ -5,10 +5,14 @@
     <ol>
         <li>
             <strong>npm start</strong>
+            <br>
+            <strong>yarn start</strong>
             (node index.js)
         </li>
         <li>
             <strong>npm run dev</strong>
+            <br>
+            <strong>yarn dev</strong>
             (nodemon index.js)
         </li>
     </ol>
