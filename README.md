@@ -4,8 +4,8 @@
 <section>
     <h2>Endpoints:</h2>
     <div>
-        <ol>
-            <li>Users
+        <ul>
+            <li> <h3>Users</h3>
                 <p>Rotas pra cria:</p>
                 <ol>
                     <li>Criar;</li>
@@ -17,6 +17,14 @@
                 </ol>
                 <hr>
             </li>
-        </ol>
+            <li> <h3>Users</h3>
+                <p>Rotas pra cria:</p>
+                <ol>
+                    <li>Enviar;</li>
+                    <li>Listar Todos;</li>
+                </ol>
+                <hr>
+            </li>
+        </ul>
     </div>
 </section>
